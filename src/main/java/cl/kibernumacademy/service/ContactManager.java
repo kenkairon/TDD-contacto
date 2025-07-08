@@ -1,5 +1,18 @@
 package cl.kibernumacademy.service;
 
-public class ContactManager {
+import java.util.ArrayList;
+import java.util.List;
+import cl.kibernumacademy.model.Contact;
 
+public class ContactManager {
+    private List<Contact> contactos = new ArrayList<>();
+
+    public void agregarContacto(Contact contacto) {
+        contactos.add(contacto);
+    }
+
+    // Refactor
+    public List<Contact> obtenerContactos() {
+        return List.copyOf(contactos);
+    }
 }
