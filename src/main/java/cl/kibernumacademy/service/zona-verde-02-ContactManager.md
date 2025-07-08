@@ -18,14 +18,23 @@ public class ContactManager {
   }
 
   public void eliminarContactoPorEmail(String email) {
-    for(Contact contacto: contactos) {
-      if(contacto.getEmail().equals(email)) {
-        contactos.remove(contacto);
-        break;
-      }
+    iterator<Contact> iterador = contactos.iterator();
+    while(iterador.hasNext()){
+        Contact contacto = iterador.next()
+        if(contacto.getEmail().equals(email)){
+            iterador.remove();
+            break;
+        }
     }
   }
 
 }
+
+    //for(Contact contacto: contactos) {
+      //if(contacto.getEmail().equals(email)) {
+       // contactos.remove(contacto);
+        //break;
+      //}
+    //}
 
 ```
