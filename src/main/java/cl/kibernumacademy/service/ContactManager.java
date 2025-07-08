@@ -15,4 +15,13 @@ public class ContactManager {
     public List<Contact> obtenerContactos() {
         return List.copyOf(contactos);
     }
+
+    public void eliminarContactoPorEmail(String email) {
+        for (Contact contacto : contactos) {
+            if (contacto.getEmail().equals(email)) {
+                contactos.remove(contacto);
+                break;
+            }
+        }
+    }
 }
